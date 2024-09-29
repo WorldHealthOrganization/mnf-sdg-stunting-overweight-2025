@@ -107,18 +107,6 @@ data from the observed age groups. The prevalence estimate for the full
 age range was then aggregated using the estimated and observed age-group 
 prevalence rates, for sources with at least one missing age group.
 
-##### Script Sections
-
-This script imputes missing age groups to integrate data sources that have 
-partial age ranges. Specifically, the sections include:
-
-1.  Loading and formatting the data (lines 12 - 195)
-2.  Running linear mixed models to predict missing age groups (lines
-    200 - 249)
-3.  Recalculating the national estimate if the previous national
-    estimate had a partial age range (lines 252 - 296)
-4.  Inspecting results and outputting estimates (lines 298 - 326)
-
 ### Merging Survey_Covariate_Data.R
 
 This script merges the imputed covariate data with the survey data and
@@ -143,15 +131,3 @@ estimated stunting rate for females, a seemingly unexplained decrease in the
 trend might occur. This could be due to a survey that only reported overall 
 prevalence without breaking it down by sex. By including the predicted female 
 prevalence from this step in the figure, we help prevent such misunderstandings.
-
-The sections include:
-
-1.  Loading and formatting the data (lines 20 - 131)
-2.  Running linear mixed models to predict missing sex groups (lines
-    134 - 430)
-3.  Merging and outputting estimates (lines 439 - 500)
-
-## Contact
-
-For questions or issues regarding this folder, please contact the
-repository maintainer.
