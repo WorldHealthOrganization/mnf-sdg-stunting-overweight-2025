@@ -37,8 +37,3 @@ will be at the folder that contains the *“1 - Preparing Covariates”*
 folder. Then execute the
 `Imputation of IHME covariate data_multiple_impute.R` script. Ensure
 that all data files are correctly placed in the `Data/IHME_covs` folder.
-
-## Contact
-
-For questions or issues regarding this folder, please contact the
-repository maintainer.
