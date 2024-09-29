@@ -24,10 +24,9 @@ The following data sources are used and can be found in the
 - **WPP2022_Demographic_Indicators_Medium.csv**: Additional demographic indicators (obtained from https://population.un.org/wpp/Download/Archive/CSV/).
 - **Tidy_World_Devel_Indic.rds**: Used as an intermediate merging dataset. Not a data source.
 
-## Imputation Process
 
-The `Imputation of IHME covariate data_multiple_impute.R` script is
-structured as follows:
+
+
 
 
 ## Usage
