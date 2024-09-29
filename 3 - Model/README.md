@@ -52,22 +52,7 @@ instructions below:
 - **marker_f**: Used to append the file name for situations where
   multiple models need to be run.
 
-### Script Sections
 
-1.  **Setting Model Parameters** (lines 13 - 49):
-
-    - In this section, the fixed and random effect parameters can be set
-      for either indicator (Stunting or Overweight).
-
-2.  **Running and Outputting the Models** (lines 58 - ):
-
-    - This section runs the analyses for each imputed dataset and
-      outputs the results.
-
-## Contact
-
-For questions or issues regarding this folder, please contact the
-repository maintainer.
 
 ## References
 
