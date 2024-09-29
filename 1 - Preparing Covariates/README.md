@@ -29,35 +29,6 @@ The following data sources are used and can be found in the
 The `Imputation of IHME covariate data_multiple_impute.R` script is
 structured as follows:
 
-1.  **Read in and Merge Data** (lines 11 - 71):
-
-    - This section involves reading the various data files and merging
-      them to create a comprehensive dataset.
-
-2.  **Imputation to Create Country-Level Means by Imputation** (lines
-    74 - 100):
-
-    - Imputation is performed to create country-level means for the
-      missing data.
-
-3.  **Perform Imputation on Mean Centered Data** (lines 101 - 169):
-
-    - This section performs the imputation on the country mean centered
-      data. The data is then back transformed, providing the imputed
-      values up to 2022.
-
-4.  **Perform Imputation for 2023-2025 for All Countries** (lines 172 - 352):
-
-    - Since there are no observations after 2022, a semi-parametric
-      longitudinal model is used to estimate the trend for each imputed
-      dataset. The 2023-2025 values are then randomly sampled from the
-      estimated predictive distribution of the outcome (SDI or MCI) for
-      each imputed dataset.
-
-5.  **Merge Data and Create Final Variables** (lines 353 - 450):
-
-    - The final step involves merging the imputed data and creating the
-      necessary final variables for analysis.
 
 ## Usage
 
