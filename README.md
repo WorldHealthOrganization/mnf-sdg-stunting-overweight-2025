@@ -1,57 +1,33 @@
 
-# Global Health Estimates of Stunting and Overweight
+# UNICEF-WHO-World Bank Joint Child Malnutrition Estimates Stunting and Overweight Global Health Estimates (2025 Edition)
 
-This repository contains all the R code used to produce the Global
-Health Estimates of Stunting and Overweight, as developed by the
-UNICEF-WHO-World Bank Joint Child Malnutrition working group.
+This GitHub repository contains code and sample data for models used by UNICEF, WHO and the World Bank to generate global health estimates for stunting and overweight. 
+These estimates are published biennially as the UNICEF-WHO-World Bank Joint Malnutrition Estimates. 
 
-## Overview
+https://data.unicef.org/resources/jme
 
-The R scripts in this repository are organized into several folders,
-each serving a specific purpose in the data processing and modeling
-workflow. Each folder contains a README file with more details about its
-contents and specific instructions.
+www.who.int/teams/nutrition-and-food-safety/monitoring-nutritional-status-and-food-safety-and-events/joint-child-malnutrition-estimates
 
-To understand the technical details of the modeling procedure and the
-methods used to estimate confidence and prediction intervals, please
-refer to:
+https://datatopics.worldbank.org/child-malnutrition/
 
-- McLain et al. (2019)
-- An application of the methods published in Saraswati et al. (2022), and
-a corresponding editorial by Finaret (2022).
+## Updates to Modeling Approach Since 2023 Edition
 
-## Folder Structure
 
-### 1. Preparing Covariates
+## Model
+The model used in these analyses is similar to that proposed in McLain et al. (2019) [^1]   The general statistical model is a penalized longitudinal mixed model with a heterogeneous error term. The non-linear longitudinal patterns in the outcomes were captured using penalized cubic B-splines, with country-specific intercepts and random cubic B-splines. 
 
-This folder contains R code to perform multiple imputation of the
-covariate data.
+## Procedure for Generating Stunting and Overweight Modelled Estimates
 
-### 2. Preparing Primary Data
+### Contents
+1. Preparing Covariates
 
-This folder includes programs to:
+2. Preparing Primary Data
 
-- Impute missing standard error (SE) information.
-- Integration of data sources that were originally collected using different 
-(non-standard) age ranges.
-- Merge survey data with covariate data.
-- Generates approximate sex-specific prevalence rates for specific years 
-and countries (solely for use in visual figures).
+3. Model
 
-### 3. Model
+4. Results
 
-This folder contains scripts for performing a multiply imputed analysis
-of the data for stunting or overweight.
-
-### 4. Results
-
-In this folder, you will find code for: 
-
-- Pooling imputed estimates. 
-- Plotting results. 
-- Comparing estimates with past data.
-
-### Additional Folders
+Additional Folders
 
 - **Data**: Contains survey prevalence estimates, raw covariate data,
   country-level classifications, and outputted analysis files.
@@ -59,7 +35,7 @@ In this folder, you will find code for:
 - **Utils**: Contains various programs and functions required to run the
   analyses.
 
-## Important Note
+### Set-up
 
 All the programs in the folders `Preparing Primary Data`, `Model`, and
 `Results` need to be run separately for both Stunting and Overweight.
@@ -82,35 +58,23 @@ For questions or issues, please contact the repository maintainer.
 
 ## Acknowledgments
 
+### Code
+We thank Alexander McLain (@alexmclain) for the development and implementation of the model code.
+
+### Conceptualization of the Model
+We thank Alexander McLain, Edward Frongillo, Monika Blössner, Juan Feng, Elaine Borghi, Chika Hayashi, Julia Krasevec, Gretchen Stevens, Mariel Finucane, Leontine Alkema and Simon Cousens, Nicholas Kassebaum for their helpful comments and contributions to this project. 
+
+### Input Data
+#### Joint Malnutrition Estimates 2023 Edition
+UNICEF: 
+
+WHO: 
+
+World Bank Group: 
+
+#### Covariates
+Global Burden of Disease Collaborative Network Institute for Health Metrics and Evaluation (IHME)
+
 ## References
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-
-<div id="ref-FINARET20221595" class="csl-entry">
-
-Finaret, Amelia B. 2022. “Advancing Nutritional Epidemiology by Linking
-Datasets and Addressing Data Quality.” *The Journal of Nutrition* 152
-(7): 1595–96. <a href="https://doi.org/10.1093/jn/nxac092">doi.org/10.1093/jn/nxac092</a>
-
-</div>
-
-<div id="ref-McLetal19" class="csl-entry">
-
-McLain, Alexander C, Edward A Frongillo, Juan Feng, and Elaine Borghi.
-2019. “Prediction Intervals for Penalized Longitudinal Models with
-Multisource Summary Measures: An Application to Childhood Malnutrition.”
-*Statistics in Medicine* 38 (6): 1002–12. <a href="https://doi.org/10.1002/sim.8024">doi.org/10.1002/sim.8024</a>
-
-</div>
-
-<div id="ref-Saretal22" class="csl-entry">
-
-Saraswati, Chitra M, Elaine Borghi, João JR da Silva Breda, Monica C
-Flores-Urrutia, Julianne Williams, Chika Hayashi, Edward A Frongillo,
-and Alexander C McLain. 2022. “Estimating Childhood Stunting and
-Overweight Trends in the European Region from Sparse Longitudinal Data.”
-*The Journal of Nutrition* 152 (7): 1773–82. <a href="https://doi.org/10.1093/jn/nxac072">doi.org/10.1093/jn/nxac072</a>
-
-</div>
-
-</div>
+[^1]: •	McLain A.C., E.A. Frongillo, E. Borghi, and J. Feng (2019). Prediction intervals for heterogeneous penalized longitudinal models with multi-source summary measures: an application to estimating child malnutrition rates. Statistics in Medicine 38:1 1002–1012. GitHub Repo: https://github.com/alexmclain/PHMM
